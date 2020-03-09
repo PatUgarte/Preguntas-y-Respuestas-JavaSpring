@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="th:http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Añade una nueva pregunta</h1>
+	<form method="POST" action="/preguntas/added">
+		<label for="preguntaInput">Texto:</label> 
+		<br> 
+		<input
+			id="preguntaInput" type="text" placeholder="Ingrese su pregunta aquí"
+			name="texto"></input> 
+		<br> 
+		<label for="categoriaInput">Categoría:</label>
+		<br> 
+		<select id="categoriaInput" name="categoria">
+			<option value="música">Música</option>
+			<option value="ciencia">Ciencia</option>
+			<option value="historia">Historia</option>
+		</select>
+		<br>
+		<button type="submit">Crear Pregunta</button>
+	</form>
+</body>
+</html>

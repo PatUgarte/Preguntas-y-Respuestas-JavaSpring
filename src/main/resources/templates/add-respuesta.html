@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="th:http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 th:text="'Añade respuestas para la pregunta:'"></h1>
+<h2 th:text="${pregunta.texto}"></h2>
+	<form method="POST" action="/pregunta/created">
+		<label for="pregunta1Input">Texto Respuesta 1:</label> 
+		<br> 
+		<input
+			id="pregunta1Input" type="text" placeholder="Respuesta 1"
+			name="respuestas"></input>
+		<input id="correcta1Input" type="radio" value="0" name="correcta"></input>
+		<br>
+		<label for="pregunta2Input">Texto Respuesta 2:</label> 
+		<br> 
+		<input
+			id="pregunta2Input" type="text" placeholder="Respuesta 2"
+			name="respuestas"></input>
+		<input id="correcta2Input" type="radio" value="1" name="correcta"></input>
+		<br>
+		<label for="pregunta3Input">Texto Respuesta 3:</label> 
+		<br> 
+		<input
+			id="pregunta3Input" type="text" placeholder="Respuesta 3"
+			name="respuestas"></input>
+		<input id="correcta3Input" type="radio" value="2" name="correcta"></input>
+		<br>
+		<label for="pregunta4Input">Texto Respuesta 4:</label> 
+		<br> 
+		<input
+			id="pregunta4Input" type="text" placeholder="Respuesta 4"
+			name="respuestas"></input>
+		<input id="correcta4Input" type="radio" value="3" name="correcta"></input>
+		<br>
+		<input type="hidden" name="id" th:value="${pregunta.id}">
+		<input type="hidden" name="texto" th:value="${pregunta.texto}">
+		<input type="hidden" name="categoria" th:value="${pregunta.categoria}">
+		<br>
+		<br>
+		<button type="submit">Crear Pregunta</button>
+	</form>
+</body>
+</html>

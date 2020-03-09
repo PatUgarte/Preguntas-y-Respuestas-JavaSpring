@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="th:http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 th:text="'Creada la pregunta y sus respuestas:'"></h1>
+<h2 th:text="${pregunta.texto}"></h2>
+<div th:each="unaRespuesta : ${respuestas}">
+	<p th:text="${unaRespuesta.texto}"></p>
+</div>
+	
+</body>
+</html>

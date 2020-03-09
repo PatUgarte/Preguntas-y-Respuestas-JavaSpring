@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="th:http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Fue añadida la pregunta:</h1>
+	<h2 th:text="${pregunta.texto}"></h2>
+	<form method="POST" action="/respuestas/add">
+		<input type="hidden" name="id" th:value="${pregunta.id}">
+		<input type="hidden" name="texto" th:value="${pregunta.texto}">
+		<input type="hidden" name="categoria" th:value="${pregunta.categoria}">
+		<button type="submit">Crear Respuestas</button>
+	</form>
+</body>
+</html>
